@@ -36,7 +36,7 @@ export default function Login() {
 
                 <section className="flex min-h-[calc(100vh-120px)] w-full items-center justify-center bg-surface px-6 py-24 md:py-10">
                     <form className="w-full max-w-md">
-                        <h2 className="mb-8 text-left text-2xl font-medium">
+                        <h2 className="mb-4 text-left text-lg font-medium">
                             Log into Famora
                         </h2>
 
