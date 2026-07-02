@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import loginhook from "../assets/loginhook.webp"
 import icon from "../assets/icon.svg"
 
-export default function Menu() {
+export default function Login() {
     const [date, setDate] = useState("")
 
     useEffect(() => {
@@ -12,11 +12,16 @@ export default function Menu() {
 
     return (
         <div className="bg-bg w-full min-h-screen overflow-x-hidden">
+            
             <div className="flex min-h-screen border-b border-[#494D53]">
-                
+                  <img
+                            className="w-[70px] absolute sm:w-[80px]"
+                            src={icon}
+                            alt="Famora icon"
+                        />
                 <div className="hidden md:block bg-bg md:w-1/2 border-r-2 border-[#494D53]">
                     <div className="flex flex-col justify-end items-center h-full w-full px-6">
-                        <div className=" text-2xl lg:text-3xl mx-auto w-full lg:w-2/3 text-center leading-relaxed">
+                        <div className="text-2xl lg:text-3xl mx-auto w-full lg:w-2/3 text-center leading-relaxed">
                             See everyday moments from your{" "}
                             <span className="bg-fm-gradient bg-clip-text text-transparent inline-block">
                                 close friends
@@ -35,31 +40,12 @@ export default function Menu() {
                 </div>
 
                 <div className="bg-surface w-full md:w-1/2 flex flex-col justify-center md:justify-end items-center px-6 py-10 gap-10">
+                <div>Log into Famora</div>
                     <div className="flex flex-col justify-center items-center w-full max-w-md">
-                        <img
-                            className="w-[70px] sm:w-[80px]"
-                            src={icon}
-                            alt="Famora icon"
-                        />
+                      
 
-                        <p className=" text-2xl sm:text-3xl mx-auto w-full text-center leading-relaxed mt-4">
-                            Get the full experience with the tablet app
-                        </p>
-
-                        <button className="my-4 bg-secondary rounded-xl py-2 text-base sm:text-lg font-semibold w-full sm:w-2/3">
-                            Open Famora
-                        </button>
+                       
                     </div>
-
-                    <p className="flex gap-3 mb-10 md:mb-20">
-                        <a className="text-primary" href="#">
-                            Login
-                        </a>
-                        or
-                        <a className="text-primary" href="#">
-                            Sign up
-                        </a>
-                    </p>
                 </div>
             </div>
 

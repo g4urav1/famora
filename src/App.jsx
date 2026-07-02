@@ -1,6 +1,7 @@
 import Menu from "./pages/MenuPage";
 import Parent from "./pages/parent";
 import Home from "./pages/Home";
+import Login from "./pages/LoginPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useContext, useState } from "react";
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
     element: <Parent />,
     children: [
       { path: "", element: <Home /> },
-      { path: "menu", element: <Menu /> }
+      { path: "menu", element: <Menu /> },
+      { path: "login", element: <Login /> }
     ]
   }
 ]);
