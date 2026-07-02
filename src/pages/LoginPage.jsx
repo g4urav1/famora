@@ -1,77 +1,144 @@
-import { useEffect, useState } from "react"
 import loginhook from "../assets/loginhook.webp"
 import icon from "../assets/icon.svg"
+import meta from "../assets/meta.svg"
 
 export default function Login() {
-    const [date, setDate] = useState("")
-
-    useEffect(() => {
-        const currentYear = new Date().getFullYear()
-        setDate(currentYear)
-    }, [])
+    const year = new Date().getFullYear()
 
     return (
-        <div className="bg-bg w-full min-h-screen overflow-x-hidden">
-            
-            <div className="flex min-h-screen border-b border-[#494D53]">
-                  <img
-                            className="w-[70px] absolute sm:w-[80px]"
-                            src={icon}
-                            alt="Famora icon"
-                        />
-                <div className="hidden md:block bg-bg md:w-1/2 border-r-2 border-[#494D53]">
-                    <div className="flex flex-col justify-end items-center h-full w-full px-6">
-                        <div className="text-2xl lg:text-3xl mx-auto w-full lg:w-2/3 text-center leading-relaxed">
-                            See everyday moments from your{" "}
-                            <span className="bg-fm-gradient bg-clip-text text-transparent inline-block">
+        <div className="min-h-screen bg-surface text-white overflow-x-hidden">
+            <main className="relative min-h-[calc(100vh-120px)] border-b border-[#494D53]/60 md:grid md:grid-cols-2">
+
+                <img
+                    className="absolute left-4 top-4 z-20 w-[70px] sm:w-[80px]"
+                    src={icon}
+                    alt="Famora icon"
+                />
+
+                <section className="hidden bg-bg md:flex md:flex-col md:items-center md:justify-center border-r border-[#494D53]/40 px-6 pt-24">
+                    <div className="w-full max-w-[620px] text-center">
+                        <h1 className="text-2xl lg:text-4xl font-medium leading-relaxed">
+                            See everyday moments from <br className="hidden lg:block" />
+                            your{" "}
+                            <span className="bg-fm-gradient bg-clip-text text-transparent">
                                 close friends
                             </span>
                             .
-                        </div>
+                        </h1>
 
-                        <div>
-                            <img
-                                className="w-3/5 min-w-[400px] mx-auto"
-                                src={loginhook}
-                                alt="Login preview"
+                        <img
+                            className="mx-auto mt-12 w-[420px] max-w-full"
+                            src={loginhook}
+                            alt="Login preview"
+                        />
+                    </div>
+                </section>
+
+                <section className="flex min-h-[calc(100vh-120px)] w-full items-center justify-center bg-surface px-6 py-24 md:py-10">
+                    <form className="w-full max-w-md">
+                        <h2 className="mb-8 text-left text-2xl font-medium">
+                            Log into Famora
+                        </h2>
+
+                        <div className="relative mb-5 w-full">
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder=" "
+                                autoComplete="username"
+                                className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10"
                             />
+
+                            <label
+                                htmlFor="username"
+                                className="pointer-events-none absolute left-6 top-2 text-[14px] font-medium text-[#b8c4d4] transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-[14px]"
+                            >
+                                Mobile number, username or email
+                            </label>
                         </div>
+
+                        <div className="relative mb-6 w-full">
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder=" "
+                                autoComplete="current-password"
+                                className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10"
+                            />
+
+                            <label
+                                htmlFor="password"
+                                className="pointer-events-none absolute left-6 top-2 text-[14px] font-medium text-[#b8c4d4] transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-[14px]"
+                            >
+                                Password
+                            </label>
+                        </div>
+
+                        <div className="space-y-4">
+                            <button
+                                type="submit"
+                                className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
+                            >
+                                Log in
+                            </button>
+
+                            <button
+                                type="button"
+                                className="w-full rounded-full py-3 text-base transition hover:bg-white/10"
+                            >
+                                Forgot password?
+                            </button>
+
+                            <div className="my-6 flex items-center gap-4">
+                                <div className="h-px flex-1 bg-white/10" />
+                                <span className="text-xs uppercase tracking-wider text-[#A8A8A8]">
+                                    or
+                                </span>
+                                <div className="h-px flex-1 bg-white/10" />
+                            </div>
+
+                            <button
+                                type="button"
+                                className="w-full rounded-full border border-accent py-3 text-base font-semibold transition hover:bg-white/10"
+                            >
+                                Login with Facebook
+                            </button>
+
+                            <button
+                                type="button"
+                                className="w-full rounded-full border border-primary py-3 text-base font-semibold text-primary transition hover:bg-white/10"
+                            >
+                                Create new account
+                            </button>
+                        </div>
+                        <div className="w-[100%] flex justify-center items-center mt-10 gap-1"><img src={meta} alt="" /><span>Meta</span></div>
+                    </form>
+                </section>
+            </main>
+
+            <footer className="px-4 py-7">
+                <div className="w-full space-y-4 text-xs text-[#A8A8A8]">
+                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-3">
+                        <a href="#">Meta</a>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">Help</a>
+                        <a href="#">API</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Location</a>
+                        <a href="#">Popular</a>
+                        <a href="#">Instagram Lite</a>
+                        <a href="#">Meta AI</a>
+                        <a href="#">Threads</a>
+                        <a href="#">Contact Uploading & Non-Users</a>
+                        <a href="#">Meta Verified</a>
                     </div>
-                </div>
 
-                <div className="bg-surface w-full md:w-1/2 flex flex-col justify-center md:justify-end items-center px-6 py-10 gap-10">
-                <div>Log into Famora</div>
-                    <div className="flex flex-col justify-center items-center w-full max-w-md">
-                      
-
-                       
-                    </div>
-                </div>
-            </div>
-
-            <footer className="px-4 py-8 mb-5">
-                <div className="text-[#A8A8A8] text-xs w-full space-y-4">
-                    <div className="flex justify-center flex-wrap gap-y-3">
-                        <a className="px-2" href="#">Meta</a>
-                        <a className="px-2" href="#">About</a>
-                        <a className="px-2" href="#">Blog</a>
-                        <a className="px-2" href="#">Jobs</a>
-                        <a className="px-2" href="#">Help</a>
-                        <a className="px-2" href="#">API</a>
-                        <a className="px-2" href="#">Privacy</a>
-                        <a className="px-2" href="#">Terms</a>
-                        <a className="px-2" href="#">Location</a>
-                        <a className="px-2" href="#">Popular</a>
-                        <a className="px-2" href="#">Instagram Lite</a>
-                        <a className="px-2" href="#">Meta AI</a>
-                        <a className="px-2" href="#">Threads</a>
-                        <a className="px-2" href="#">Contact Uploading & Non-Users</a>
-                        <a className="px-2" href="#">Meta Verified</a>
-                    </div>
-
-                    <div className="flex justify-center flex-wrap gap-3">
+                    <div className="flex flex-wrap justify-center gap-3">
                         <a href="#">English</a>
-                        <a href="#">© {date} Instagram from Meta</a>
+                        <span>© {year} Famora from Meta</span>
                     </div>
                 </div>
             </footer>

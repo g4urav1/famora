@@ -46,17 +46,17 @@ export default function Menu() {
                             Get the full experience with the tablet app
                         </p>
 
-                        <button className="my-4 bg-secondary rounded-xl py-2 text-base sm:text-lg font-semibold w-full sm:w-2/3">
+                        <button className="my-4 bg-primary rounded-xl py-2 text-base sm:text-lg font-semibold w-full sm:w-2/3">
                             Open Famora
                         </button>
                     </div>
 
                     <p className="flex gap-3 mb-10 md:mb-20">
-                        <a className="text-primary" href="#">
+                        <a className="text-secondary" href="#">
                             Login
                         </a>
                         or
-                        <a className="text-primary" href="#">
+                        <a className="text-secondary" href="#">
                             Sign up
                         </a>
                     </p>
