@@ -1,10 +1,12 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { LoginContext } from "../context/context";
+import { LoginContext, MobileContext } from "../context/context";
 
 export default function Home() {
   const { loggedin } = useContext(LoginContext);
   const navigate = useNavigate();
+
+
 
   useEffect(() => {
     if (!loggedin) {
@@ -14,9 +16,9 @@ export default function Home() {
 
   return (
     <>
-      
-        <div>
-          Home Page
+
+      <div>
+        Home Page
       </div>
     </>
   );
