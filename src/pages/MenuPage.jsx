@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import loginhook from "../assets/loginhook.webp"
 import icon from "../assets/icon.svg"
 import famora from "../assets/famora.svg"
+import meta from "../assets/meta.svg"
 import { MobileContext } from "../context/context"
 import { useNavigate } from "react-router-dom"
 
@@ -134,10 +135,27 @@ export default function Menu() {
                     </header>
 
                     <main className="flex w-full justify-center flex-col items-center">
-                        <div className="flex flex-col justify-center items-center">
-                            <div><img src={famora} alt="" /></div>
-                            <p>Share <span className="bg-fm-gradient bg-clip-text text-transparent">everyday moments</span> with your close friends.
-</p>
+                        <div className="flex flex-col justify-center items-center min-h-[calc(100vh-120px)] gap-4 px-4">
+                            <div>
+                                <img src={famora} alt="" /></div>
+                            <p className="text-2xl text-center w-4/5">Share <span className="bg-fm-gradient bg-clip-text text-transparent">everyday moments</span> with your close friends.
+                            </p>
+                            <div>     
+                                <button className="my-4 bg-primary rounded-xl px-8 py-2 text-base sm:text-lg font-semibold w-full sm:w-2/3">
+                                Open Famora
+                            </button>
+                            </div>
+
+                            <p className="flex gap-3 mb-10 md:mb-20">
+                                <a className="text-secondary" href="#">
+                                    Login
+                                </a>
+                                or
+                                <a className="text-secondary" href="#">
+                                    Sign up
+                                </a>
+                            </p>
+                        <div className="w-[100%] flex justify-center items-center mt-10 gap-1"><img src={meta} alt="" /><span>Meta</span></div>
                         </div>
                     </main>
 
