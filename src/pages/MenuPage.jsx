@@ -126,7 +126,7 @@ export default function Menu() {
 
                     <header className="border-b p-4 border-[#494D53]/60 flex justify-between bg-surface">
                         <div>
-                            <img src={famora} alt="" />
+                            <img  src={famora} alt="" />
                         </div>
                         <div className="flex gap-2 text-sm font-semibold ">
                             <button>Log in</button>
@@ -137,7 +137,7 @@ export default function Menu() {
                     <main className="flex w-full justify-center flex-col items-center">
                         <div className="flex flex-col justify-center items-center min-h-[calc(100vh-120px)] gap-4 px-4">
                             <div>
-                                <img src={famora} alt="" /></div>
+                                <img className="w-[200px]" src={famora} alt="" /></div>
                             <p className="text-2xl text-center w-4/5">Share <span className="bg-fm-gradient bg-clip-text text-transparent">everyday moments</span> with your close friends.
                             </p>
                             <div>     
