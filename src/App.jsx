@@ -5,6 +5,7 @@ import Login from "./pages/LoginPage";
 import Signup from "./pages/SignupPage";
 import SignupAuth from "./pages/SignupAuth";
 import SetupAcc from "./pages/SetupAcc";
+import ResetPass from "./pages/resetPassword";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useContext, useState } from "react";
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
       { path: "login", element: <Login /> },
       { path: "signup", element: <Signup /> },
       { path: "auth", element: <SignupAuth /> },
-      { path: "account_setup", element: <SetupAcc /> }
+      { path: "account_setup", element: <SetupAcc /> },
+      { path: "password/reset", element: <ResetPass /> }
     ]
   }
 ]);

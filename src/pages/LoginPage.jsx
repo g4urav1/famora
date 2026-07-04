@@ -14,6 +14,10 @@ export default function Login() {
 
     const { isMobile, setIsMobile } = useContext(MobileContext)
 
+    function handleLogin() {
+        navigate("/")
+    }
+
     useEffect(() => {
         const checkScreenSize = () => {
             const width = window.innerWidth;
@@ -28,26 +32,26 @@ export default function Login() {
         return () => {
             window.removeEventListener("resize", checkScreenSize);
         };
-    }, [navigate]);
+    }, []);
 
     return (
 
         <div className="min-h-screen bg-surface text-white overflow-x-hidden">
-                {!isMobile ? <img
-                    className="absolute left-4 top-4 z-20 w-[70px] sm:w-[80px]"
-                    src={icon}
-                    alt="Famora icon"
-                /> :
-                    <header className="border-b p-4 bg-surface border-[#494D53]/60 flex justify-between">
-                        <div>
-                            <img src={famora} alt="" />
-                        </div>
-                        <div className="flex gap-2 text-sm font-semibold ">
-                            <button>Sign up</button>
-                            <button className="bg-[#8B5CF6] rounded-xl px-2">Open app</button>
-                        </div>
-                    </header>
-                }
+            {!isMobile ? <img
+                className="absolute left-4 top-4 z-20 w-[70px] sm:w-[80px]"
+                src={icon}
+                alt="Famora icon"
+            /> :
+                <header className="border-b p-4 bg-surface border-[#494D53]/60 flex justify-between">
+                    <div>
+                        <img src={famora} alt="" />
+                    </div>
+                    <div className="flex gap-2 text-sm font-semibold ">
+                        <button onClick={() => { navigate("/signup") }} >Sign up</button>
+                        <button className="bg-[#8B5CF6] rounded-xl px-2">Open app</button>
+                    </div>
+                </header>
+            }
             <main className="relative min-h-[calc(100vh-82.67px)] md:border-b md:border-[#494D53]/60 md:grid md:grid-cols-2">
 
 
@@ -82,6 +86,7 @@ export default function Login() {
                                 id="username"
                                 placeholder=" "
                                 autoComplete="username"
+                                autoFocus
                                 className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10"
                             />
 
@@ -113,6 +118,7 @@ export default function Login() {
                         <div className="space-y-4">
                             <button
                                 type="submit"
+                                onClick={() => { handleLogin() }}
                                 className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
                             >
                                 Log in
