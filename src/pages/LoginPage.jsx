@@ -34,9 +34,11 @@ export default function Login() {
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
     try {
-      const response = fetch("http://localhost:1111/login", {
+      const response = await fetch("http://localhost:1111/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -46,10 +48,13 @@ export default function Login() {
           password,
         }),
       });
-      const data = response.json();
+      const data = await response.json();
       if (response.ok) {
         alert(data.message);
         navigate("/");
+      }
+      else{
+        alert(data.message);
       }
     } catch (error) {
       console.error(error);
@@ -159,10 +164,8 @@ export default function Login() {
 
             <div className="space-y-4">
               <button
-                type="submit"
-                onClick={() => {
-                  handleLogin();
-                }}
+                type="button"
+                onClick={handleLogin}
                 className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
               >
                 Log in
