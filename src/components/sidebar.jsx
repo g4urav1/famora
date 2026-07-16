@@ -153,7 +153,7 @@ export default function Sidebar() {
                 />
 
                 <Item
-                  to="/reels"
+                  to="/"
                   id="reel"
                   label="Reels"
                   icon={<ReelIcon />}
@@ -161,7 +161,7 @@ export default function Sidebar() {
                 />
 
                 <Item
-                  to="/messages"
+                  to="/"
                   id="message"
                   label="Messages"
                   icon={<Message />}
@@ -169,7 +169,7 @@ export default function Sidebar() {
                 />
 
                 <Item
-                  to="/search"
+                  to="/"
                   id="search"
                   label="Search"
                   icon={<Search />}
@@ -177,7 +177,7 @@ export default function Sidebar() {
                 />
 
                 <Item
-                  to="/explore"
+                  to="/"
                   id="explore"
                   label="Explore"
                   icon={<Explore />}
@@ -185,7 +185,7 @@ export default function Sidebar() {
                 />
 
                 <Item
-                  to="/notifications"
+                  to="/"
                   id="notifications"
                   label="Notifications"
                   icon={<Heart />}
@@ -193,7 +193,7 @@ export default function Sidebar() {
                 />
 
                 <Item
-                  to="/create"
+                  to="/"
                   id="create"
                   label="Create"
                   icon={<Plus />}
@@ -201,7 +201,7 @@ export default function Sidebar() {
                 />
 
                 <Item
-                  to="/dashboard"
+                  to="/"
                   id="dashboard"
                   label="Dashboard"
                   icon={<Dashboard />}
@@ -390,28 +390,28 @@ export default function Sidebar() {
                 />
 
                 <MobileItem
-                  to="/search"
+                  to="/"
                   id="search"
                   icon={<Search />}
                   activeIcon={<SearchFill />}
                 />
 
                 <MobileItem
-                  to="/reels"
+                  to="/"
                   id="reel"
                   icon={<ReelIcon />}
                   activeIcon={<ReelIconFill />}
                 />
 
                 <MobileItem
-                  to="/messages"
+                  to="/"
                   id="message"
                   icon={<Message />}
                   activeIcon={<MessageFill />}
                 />
 
                 <NavLink
-                  to={"/profile"}
+                  to={"/"}
                   type="button">
                   <div className="hover:text-hovertext hover:bg-hoverbg p-3 rounded-lg ">
                     <User size={24} /></div>

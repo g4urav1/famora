@@ -2,7 +2,7 @@
 
 export default function ProfilePage() {
     return (
-        <div>profile</div>
+        <div className="text-text bg-bg">profile</div>
     )
 }
 
