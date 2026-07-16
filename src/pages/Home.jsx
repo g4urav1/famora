@@ -4,11 +4,13 @@ import { MobileContext } from "../context/context";
 import famora from "../assets/icon.svg"
 
 import Sidebar from "../components/sidebar"
+import Nav from "../components/nav"
 
 export default function Home() {
   const navigate = useNavigate();
 
   const [active, setActive] = useState("home");
+  const { isMobile, setIsMobile } = useContext(MobileContext);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -28,10 +30,27 @@ export default function Home() {
     }
   }, [navigate]);
 
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const width = window.innerWidth;
+
+      setIsMobile(width < 768);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
 
   return (
     <div className="bg-bg min-h-screen">
-
+      {isMobile && <Nav />}
+      <Sidebar />
       <main>
 
       </main>

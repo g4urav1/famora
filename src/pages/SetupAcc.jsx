@@ -108,7 +108,7 @@ export default function SetupAcc() {
   };
 
   return (
-    <div className="min-h-screen bg-bg text-white overflow-x-hidden">
+    <div className="min-h-screen bg-bg text-text overflow-x-hidden">
       {!isMobile ? (
         <img className=" w-[70px] sm:w-[80px] " src={icon} alt="Famora icon" />
       ) : (
@@ -142,7 +142,7 @@ export default function SetupAcc() {
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
-                className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10"
+                className="peer w-full rounded-[22px] border border-[#4b5563] bg-bg px-6 pb-3 pt-8 text-text outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10"
               />
               <div
                 onClick={() => {
@@ -165,7 +165,7 @@ export default function SetupAcc() {
               onClick={() => {
                 passwordSetup();
               }}
-              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
+              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-text  transition hover:scale-[1.01] active:scale-[0.99]"
             >
               Next
             </button>
@@ -231,7 +231,7 @@ export default function SetupAcc() {
                     setError("");
                   }
                 }}
-                className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
+                className="peer w-full rounded-[22px] border border-[#4b5563] bg-bg px-6 pb-3 pt-8 text-text outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
                 style={{ colorScheme: "dark" }}
               />
 
@@ -249,7 +249,7 @@ export default function SetupAcc() {
                 setAgePage(false);
                 setNamePage(true);
               }}
-              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
+              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-text  transition hover:scale-[1.01] active:scale-[0.99]"
             >
               Next
             </button>
@@ -283,7 +283,7 @@ export default function SetupAcc() {
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
-                className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
+                className="peer w-full rounded-[22px] border border-[#4b5563] bg-bg px-6 pb-3 pt-8 text-text outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
               />
 
               <label
@@ -299,7 +299,7 @@ export default function SetupAcc() {
                 setNamePage(false);
                 setUserNamePage(true);
               }}
-              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
+              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-text  transition hover:scale-[1.01] active:scale-[0.99]"
             >
               Next
             </button>
@@ -336,7 +336,7 @@ export default function SetupAcc() {
                   setUserName(e.target.value);
                 }}
                 autoComplete="username"
-                className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
+                className="peer w-full rounded-[22px] border border-[#4b5563] bg-bg px-6 pb-3 pt-8 text-text outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
               />
 
               <label
@@ -352,7 +352,7 @@ export default function SetupAcc() {
                 setUserNamePage(false);
                 setTermsPage(true);
               }}
-              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
+              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-text  transition hover:scale-[1.01] active:scale-[0.99]"
             >
               Next
             </button>
@@ -395,7 +395,7 @@ export default function SetupAcc() {
             <button
               type="submit"
               onClick={()=>handleSubmit()}
-              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
+              className="w-full rounded-full bg-primary py-3 text-base font-semibold text-text  transition hover:scale-[1.01] active:scale-[0.99]"
             >
               I agree
             </button>

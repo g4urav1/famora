@@ -72,7 +72,7 @@ export default function Signup() {
           </div>
           <div className="flex gap-2 text-sm font-semibold ">
             <button>Log in</button>
-            <button className="bg-[#8B5CF6] rounded-xl px-2">Open app</button>
+            <button className="bg-primary rounded-xl px-2">Open app</button>
           </div>
         </header>
       )}
@@ -95,7 +95,7 @@ export default function Signup() {
                 setInputMail(e.target.value);
                 setMail(e.target.value);
               }}
-              className="peer w-full rounded-[22px] border border-[#4b5563] bg-[#1d1d20] px-6 pb-3 pt-8 text-white outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
+              className="peer w-full rounded-[22px] border border-[#4b5563] bg-bg px-6 pb-3 pt-8 text-text outline-none transition-all duration-200 focus:border-accent focus:ring-4 focus:ring-cyan-400/10 mb-3"
             />
 
             <label
@@ -110,7 +110,7 @@ export default function Signup() {
             onClick={() => {
               handleSignup();
             }}
-            className="w-full rounded-full bg-primary py-3 text-base font-semibold text-white  transition hover:scale-[1.01] active:scale-[0.99]"
+            className="w-full rounded-full bg-primary py-3 text-base font-semibold text-text  transition hover:scale-[1.01] active:scale-[0.99]"
           >
             Next
           </button>
@@ -135,7 +135,7 @@ export default function Signup() {
 
       {!isMobile && (
         <footer className="px-4 py-7">
-          <div className="w-full space-y-4 text-xs text-[#A8A8A8]">
+          <div className="w-full space-y-4 text-xs text-text">
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-3">
               <a href="#">Meta</a>
               <a href="#">About</a>
