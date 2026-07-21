@@ -5,6 +5,7 @@ import famora from "../assets/famora.svg"
 import meta from "../assets/meta.svg"
 import { MobileContext } from "../context/context"
 import { useNavigate } from "react-router-dom"
+import Footer from "../components/Footer"
 
 export default function Menu() {
 
@@ -96,30 +97,7 @@ export default function Menu() {
                     </main>
 
                     <footer className="px-4 py-8 mb-5">
-                        <div className="text-[#A8A8A8] text-xs w-full space-y-4">
-                            <div className="flex justify-center flex-wrap gap-y-3">
-                                <a className="px-2" href="#">Meta</a>
-                                <a className="px-2" href="#">About</a>
-                                <a className="px-2" href="#">Blog</a>
-                                <a className="px-2" href="#">Jobs</a>
-                                <a className="px-2" href="#">Help</a>
-                                <a className="px-2" href="#">API</a>
-                                <a className="px-2" href="#">Privacy</a>
-                                <a className="px-2" href="#">Terms</a>
-                                <a className="px-2" href="#">Location</a>
-                                <a className="px-2" href="#">Popular</a>
-                                <a className="px-2" href="#">Instagram Lite</a>
-                                <a className="px-2" href="#">Meta AI</a>
-                                <a className="px-2" href="#">Threads</a>
-                                <a className="px-2" href="#">Contact Uploading & Non-Users</a>
-                                <a className="px-2" href="#">Meta Verified</a>
-                            </div>
-
-                            <div className="flex justify-center flex-wrap gap-3">
-                                <a href="#">English</a>
-                                <a href="#">© {year} Instagram from Meta</a>
-                            </div>
-                        </div>
+                        <Footer/>
                     </footer>
                 </div> :
                 <div className="bg-bg min-h-screen">
